@@ -5,7 +5,7 @@
 
 Важно: датасет в проекте синтетический. Он генерируется локально и нужен для демонстрации аналитического подхода, SQL-логики и работы с `pandas`.
 
-## Цель
+## Цель проекта
 
 - построить воронку пользовательских событий;
 - рассчитать retention по когортам;
@@ -22,21 +22,21 @@
 
 ```text
 MyProject/
-├── 1.py
+├── main.py                         # точка входа
 ├── README.md
 ├── requirements.txt
-├── data/
+├── data/                        # исходные данные
 │   └── user_events.csv
-├── outputs/
+├── outputs/                     # результаты анализа
 │   ├── funnel.csv
 │   ├── retention_by_cohort.csv
 │   ├── retention_overall.csv
 │   ├── retention_pivot.csv
 │   └── summary.md
-├── sql/
+├── sql/                         # SQL-запросы
 │   ├── funnel.sql
 │   └── retention.sql
-└── src/
+└── src/                         # логика проекта
     ├── analyze.py
     └── generate_data.py
 ```
@@ -44,7 +44,7 @@ MyProject/
 ## Что делает мой проект
 
 1. Генерирует таблицу событий пользователей: `visit`, `signup`, `onboarding_complete`, `first_purchase`, `session`.
-2. Загружает данные в in-memory SQLite.
+2. Загружает данные в SQLite.
 3. Считает воронку и retention SQL-запросами.
 4. Обрабатывает результаты в `pandas`.
 5. Сохраняет итоговые таблицы в папку `outputs/`.
