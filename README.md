@@ -22,7 +22,7 @@
 
 ```text
 MyProject/
-├── main.py                         # точка входа
+├── main.py                      # точка входа
 ├── README.md
 ├── requirements.txt
 ├── data/                        # исходные данные
